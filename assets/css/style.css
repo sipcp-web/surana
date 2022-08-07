@@ -276,11 +276,15 @@ body {
 }
 
 .hero-banner {
-    margin-bottom: 30px;
+    margin-top: 00px;
+    top: 10000px;
+    right: 11px;
 }
 
 .hero-banner img {
     width: 100%;
+    border-radius: 5%;
+    
 }
 
 .hero-title {
