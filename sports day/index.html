@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contact V5</title>
+<title>SPORTS DAY 2022</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="icon" type="image/png" href="favicons/icons-favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="icon" type="image/png" href="https://www.sipcp.ml/assets/images/logo2.jpg">
 
 <link rel="stylesheet" type="text/css" href="css/css-bootstrap.min.css">
 
@@ -33,27 +33,43 @@
 <body>
 <div class="container-contact100">
 <div class="wrap-contact100">
-<form class="contact100-form validate-form">
+	<form id="submit-form" action="">
 <span class="contact100-form-title">
-Contact Us
+SPORTS DAY
 </span>
 <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
 <span class="label-input100">FULL NAME *</span>
 <input class="input100" type="text" name="name" placeholder="Enter Your Name">
 </div>
-<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Enter Your Email (e@a.x)">
-<span class="label-input100">Email *</span>
-<input class="input100" type="text" name="email" placeholder="Enter Your Email ">
-</div>
-<div class="wrap-input100 bg1 rs1-wrap-input100">
-<span class="label-input100">Phone</span>
-<input class="input100" type="text" name="phone" placeholder="Enter Number Phone">
-</div>
 <div class="wrap-input100 input100-select bg1">
-<span class="label-input100">Needed Services *</span>
+	<span class="label-input100">Your class *</span>
+	<div>
+	<select class="js-select2" name="class">
+	<option>Class</option>
+	<option>1st seba</option>
+	<option>1st ceba</option>
+	<option>1st pcmb/cs</option>
+	<option>2nd seba</option>
+	<option>2nd ceba</option>
+	<option>2nd pcmb/cs</option>
+
+	</select>
+	<div class="dropDownSelect2"></div>
+	</div>
+	</div>
+
+
+	
+	<div>
+		<center>
+		Field events
+		</center>
+	</div>
+<div class="wrap-input100 input100-select bg1">
+
 <div>
-<select class="js-select2" name="service">
-<option>Please chooses</option>
+<select class="js-select2" name="games">
+<option>Select games</option>
 <option>eCommerce Bussiness</option>
 <option>UI/UX Design</option>
 <option>Online Services</option>
@@ -61,44 +77,9 @@ Contact Us
 <div class="dropDownSelect2"></div>
 </div>
 </div>
-<div class="w-full dis-none js-show-service">
-<div class="wrap-contact100-form-radio">
-<span class="label-input100">What type of products do you sell?</span>
-<div class="contact100-form-radio m-t-15">
-<input class="input-radio100" id="radio1" type="radio" name="type-product" value="physical" checked>
-<label class="label-radio100" for="radio1">
-Phycical Products
-</label>
 </div>
-<div class="contact100-form-radio">
-<input class="input-radio100" id="radio2" type="radio" name="type-product" value="digital">
-<label class="label-radio100" for="radio2">
-Digital Products
-</label>
-</div>
-<div class="contact100-form-radio">
-<input class="input-radio100" id="radio3" type="radio" name="type-product" value="service">
-<label class="label-radio100" for="radio3">
-Services Consulting
-</label>
-</div>
-</div>
-<div class="wrap-contact100-form-range">
-<span class="label-input100">Budget *</span>
-<div class="contact100-form-range-value">
-$<span id="value-lower">610</span> - $<span id="value-upper">980</span>
-<input type="text" name="from-value">
-<input type="text" name="to-value">
-</div>
-<div class="contact100-form-range-bar">
-<div id="filter-bar"></div>
-</div>
-</div>
-</div>
-<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate="Please Type Your Message">
-<span class="label-input100">Message</span>
-<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
-</div>
+
+
 <div class="container-contact100-form-btn">
 <button class="contact100-form-btn">
 <span>
@@ -147,29 +128,7 @@ Submit
 <script src="js/countdowntime-countdowntime.js"></script>
 
 <script src="js/noui-nouislider.min.js"></script>
-<script>
-	    var filterBar = document.getElementById('filter-bar');
 
-	    noUiSlider.create(filterBar, {
-	        start: [ 1500, 3900 ],
-	        connect: true,
-	        range: {
-	            'min': 1500,
-	            'max': 7500
-	        }
-	    });
-
-	    var skipValues = [
-	    document.getElementById('value-lower'),
-	    document.getElementById('value-upper')
-	    ];
-
-	    filterBar.noUiSlider.on('update', function( values, handle ) {
-	        skipValues[handle].innerHTML = Math.round(values[handle]);
-	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
-	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
-	    });
-	</script>
 
 <script src="js/7091-js-main.js"></script>
 
@@ -182,5 +141,24 @@ Submit
   gtag('config', 'UA-23581568-13');
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"751309181f3d08fb","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.8.1","si":100}' crossorigin="anonymous"></script>
+<script>
+	$("#submit-form").submit((e)=>{
+		e.preventDefault()
+		$.ajax({
+			url:"https://script.google.com/macros/s/AKfycbwz47GMT8LyZoLl0cAxusrVmI3zEG4khtCpQwjSzhux4IGjlnCAOv-V5WupLneFhl42/exec",
+			data:$("#submit-form").serialize(),
+			method:"post",
+			success:function (response){
+				alert("Form submitted successfully")
+				window.location.reload()
+				//window.location.href="https://google.com"
+			},
+			error:function (err){
+				alert("Something Error")
+
+			}
+		})
+	})
+</script>
 </body>
 </html>
