@@ -242,6 +242,7 @@ body {
 
 .navbar-list {
     margin-bottom: 15px;
+    color: hsl(240, 13%, 8%);;
 }
 
 .navbar-link {
@@ -250,6 +251,26 @@ body {
     padding-block: 15px;
     font-family: var(--dm-sans);
 }
+
+ul li ul.dropdown li {
+    display: block;
+    }
+    ul li ul.dropdown {
+    color: hsl(240, 13%, 8%);
+    width: 100%;
+    background:hsl(118, 41%, 62%);  
+    display : none;
+    font-weight: var(--fw-500);
+    font-family: var(--dm-sans);
+    padding-block: 15px;
+    
+    }
+    ul li a:hover {
+    background:  hsl(118, 41%, 62%);
+    }
+    ul li:hover ul.dropdown {
+    dispLay: block;
+    }
 
 .overlay {
     position: fixed;
@@ -698,7 +719,7 @@ body {
    * HEADER
    */
     .header .logo {
-        min-width: 160px;
+        min-width: 10px;
     }
     /**
    * DEPARTMENTS
@@ -718,6 +739,8 @@ body {
 /**
  * responsive for larger than 768px screen
  */
+
+ 
 
 @media (min-width: 768px) {
     /**
@@ -868,9 +891,27 @@ body {
     :focus)::after {
         --scale: 1;
     }
+    ul li ul.dropdown li {
+        display: block;
+        }
+        ul li ul.dropdown {
+        width: 12%;
+        background: #ffffff;
+        position : absolute;
+        Z-index: 0;
+        dispLay : none;
+        transition: var(--transition);
+        }
+        ul li a:hover {
+        background: #ffffff;
+        }
+        ul li:hover ul.dropdown {
+        display: block;
+        }
     .overlay {
         display: none;
     }
+    
     /**
    * HERO
    */
